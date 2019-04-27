@@ -11,7 +11,12 @@ import logging
 import sys
 def main(addr, game_port, web_port,
          q_rate = datetime.timedelta(seconds=10)):
-    "main game entry point. everything is event driven."
+    """main game entry point. everything is event driven.
+    this used to handle both the web page/status and the game server (web_skt and game_skt).
+    However, for improved reliabilty the web page server is now in ajax_server.py. There remains
+    some remnants of this logic in this file, however.
+"""
+    
     log = logging.getLogger()
 
     game_skt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
