@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Non Trivial Trivia Server</title>
+  <title>Non trivial trivia server</title>
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 </head>
@@ -12,7 +12,7 @@
       addEventListener('DOMContentLoaded', (event) => {
           console.log('Loading timer');
           setInterval(() =>{
-              fetch('http://eg.bucknell.edu:36999')
+              fetch('http://eg:36999/')
                   .then(resp => resp.text())
                   .then(text => {
                       document.getElementById("results").innerHTML =
@@ -21,7 +21,7 @@
                   .catch(err =>{
                       console.log("Fetch error: " + err);
                   })
-          }, 333)
+          }, 789)
       });
   </script>
 </body>
