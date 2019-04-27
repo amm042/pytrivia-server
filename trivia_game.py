@@ -87,7 +87,7 @@ class TriviaClient:
                         self.handle = self.authenticate
             except PermissionError:
                 self.skt.send("NOPERMS {}".format(pubkey).encode())
-                self.handle = self.authenticat
+                self.handle = self.authenticate
         else:
             self.skt.send("NOKEY {}".format(pubkey).encode())
 
